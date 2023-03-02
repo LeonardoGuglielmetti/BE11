@@ -1,0 +1,39 @@
+<header>
+    <div class="p-2 bg-light shadow rounded m-3 d-flex align-items-center w-75 mx-auto">
+        <p class="m-0 flex-grow-1" style="font-size:large;">Welcome {{user.username}}</p>
+        <a href="/logout" class="btn btn-info">LOG OUT</a>
+    </div>
+</header>
+<main>
+
+<h1 class="text-center m-5">ENTER PRODUCT</h1>
+<div style="width: 75%; margin:0 auto;">
+    <form id="productForm">
+        <input class="form-control mb-3" name="nombre" type="text" placeholder="Name">
+        <input class="form-control mb-3" name="precio" type="number" placeholder="Price">
+        <input class="form-control mb-3" name="imagen" type="text" placeholder="Image URL">
+        <input class="form-control mb-3" name="code" type="number" placeholder="Code" maxlength="4">
+        <input class="form-control mb-4" name="stock" type="number" placeholder="Stock">
+        <button type="submit" class="btn btn-primary w-100">SAVE</button>
+    </form>
+</div>
+<h1 class="text-center m-5">PRODUCTS</h1>
+<div id="productsTable" class="w-75 mx-auto">
+</div>
+
+<h1 class="text-center m-5">MESSAGES</h1>
+<div class="w-75 mx-auto mb-3 d-flex">
+    <div class="w-25">
+        <form id="messageForm" class="d-flex flex-column p-1">
+            <input class="form-control mb-2" type="text" name="name" placeholder="Name">
+            <input class="form-control mb-2" type="email" name="mail" placeholder="Email">
+            <textarea class="form-control mb-3 fs-6" placeholder="Enter your message here"></textarea>
+            <button type="submit" class="btn btn-outline-primary">SEND</button>
+        </form>
+    </div>
+    <div class="bg-secondary w-75 mx-2" id="messagesContainer"></div>
+</div>
+</main>
+
+<script src="/socket.io/socket.io.js"></script> //  ¡¡¡ ERROR SOCKET !!!
+<script src="/js/main.js"></script>
